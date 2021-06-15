@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/item_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@color/purple_200" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/item_select"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:visibility="invisible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="check.json"
+                    app:lottie_loop="false"
+                    app:lottie_repeatMode="restart" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="이름"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/item_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="카테고리" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

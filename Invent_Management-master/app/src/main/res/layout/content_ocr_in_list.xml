@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textSize="16sp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/popup_round"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/item_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+
+                android:layout_weight="1"
+                android:background="@null"
+                android:entries="@array/lCategory"
+                android:gravity="left"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_round_close_24" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="40dp"
+                android:text="품목"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--<Button
+                android:id="@+id/item_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="카테고리   "
+                android:textColor="@color/grey_500"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/spinner_ic_left" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/item_sCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="소분류명"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@color/grey_500"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View style="@style/Line_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/item_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="단가"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="원"
+                    android:textColor="@color/grey_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View style="@style/Line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/item_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="수량"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="개"
+                    android:textColor="@color/grey_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/Line_width" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/item_nDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="유통기한"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="일"
+                    android:textColor="@color/grey_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View style="@style/Line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/item_unit_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="상세수량"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:entries="@array/unit"
+                    android:spinnerMode="dialog"
+                    android:theme="@style/spinner" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

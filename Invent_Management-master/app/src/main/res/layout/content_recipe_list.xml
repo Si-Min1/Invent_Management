@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"
+                android:background="@drawable/popup_round">
+
+                <!--<ImageView
+                    android:id="@+id/recipe_img"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_round_left"
+                    android:scaleType="centerCrop"/>-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/recipe_img"
+                    android:layout_height="70dp"
+                    android:layout_width="70dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:src="@color/grey_200" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/recipe_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="레시피명"
+                        android:textColor="@color/purple_700"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_baseline_more_vert_24"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recipe_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="판매가격"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/recipe_unit_price"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="단가"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="700dp"
+    android:background="@drawable/popup_round"
+    tools:context=".OcrActivity">
+
+    <LinearLayout
+        android:id="@+id/image_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop ="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_weight="1">
+        <!--note 타이틀-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="right|center">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_round"
+                android:text="재촬영"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+            <!--note 가게명-->
+            <TextView
+                android:id="@+id/store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!--note 날짜(년도)-->
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    />
+                <!--note 날짜(월/일/요일)-->
+                <TextView
+                    android:id="@+id/month_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+
+         </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--note !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!품목!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <ScrollView
+            android:id="@+id/ScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/items"
+                    android:layout_marginBottom="5dp"
+                        tools:ignore="ExtraText">
+
+                        <!--note OcrResultActivity에 동적 구현 함
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:text="품목" />
+
+                        <View style="@style/Line_width" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="20dp"
+                                android:gravity="center_vertical"
+                                android:text="단가" />
+
+                            <View style="@style/Line_height" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="20dp"
+                                android:gravity="center_vertical"
+                                android:text="수량" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="20dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:text="금액"
+                        tools:ignore="RtlHardcoded" />-->
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+        <!-- 닫기 버튼 -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="10dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:gravity="center"
+                android:onClick="mOnClose"
+                android:padding="16dp"
+                android:text="취소"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:gravity="center"
+                android:onClick="mOnClose"
+                android:padding="16dp"
+                android:text="확인"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

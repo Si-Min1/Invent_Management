@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/popup_round"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="40dp"
+            android:gravity="center|left"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/purple_700"
+            android:text="품목" />
+
+        <View style="@style/Line_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <TextView
+                android:id="@+id/item_unit_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="right|center"
+                android:text="단가" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/grey_500"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="원"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <TextView
+                android:id="@+id/item_count"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="right|center"
+                android:text="수량" />
+
+                <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/grey_500"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="개"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/grey_500"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="="/>
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="금액" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/grey_500"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="원"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

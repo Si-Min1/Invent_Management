@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.example.user.ncpaidemo"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        archivesBaseName = "NCP-AI-Demo-${versionName}-${new Date().format('yyyyMMdd')}"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+//파이어 베이스SDK
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+
+    testImplementation 'junit:junit:4.13.2'
+
+    //권한허용창
+    implementation 'gun0912.ted:tedpermission:2.0.0'
+    //카카오톡 로그인
+    implementation 'com.kakao.sdk:usermgmt:1.27.0'
+    // Glide 이미지 로드 라이브러리
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //파이어 베이스 SDK
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
+    //implementation 'com.google.firebase:firebase-storage'
+
+    //원형 이미지 뷰 추가
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Tab 레이아웃
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.1'
+
+    //프로그레스바
+    implementation 'com.dinuscxj:circleprogressbar:1.3.0' // CircleProgressBar
+
+    //애니메이션
+    implementation 'com.airbnb.android:lottie:3.2.2'
+    //알림 푸시
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:elevation="10dp">
+            <ImageButton
+                android:id="@+id/setting_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="OCR 설정"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:gravity="right"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="85dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="20dp"
+            android:text="Secret Key"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_ocr_api_gw_url" />
+        <EditText
+            android:id="@+id/text_input_ocr_api_gw_url"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="API Gateway URL"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <EditText
+            android:id="@+id/text_input_ocr_secret_key"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_auth"
+        android:layout_width="84dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="right"
+
+        android:text="저장"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_ocr_secret_key" />
+
+    <TextView
+        android:id="@+id/textView_rlt"
+        android:layout_width="134dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="TextView"
+        android:textColor="#FF0000" />
+
+    </LinearLayout>
+
+</LinearLayout>

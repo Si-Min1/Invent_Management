@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unit">
+        <item>▼</item>
+    <item>g</item>
+    <item>kg</item>
+    <item>mL</item>
+    <item>L</item>
+    </string-array>
+
+    <string-array name="lCategory">
+        <item>카테고리 ▼</item>
+        <item>채소</item>
+        <item>과일</item>
+        <item>양곡</item>
+        <item>견과</item>
+        <item>육류</item>
+        <item>수산물</item>
+        <item>양념</item>
+        <item>조미료</item>
+        <item>소스</item>
+        <item>면류</item>
+        <item>유제품</item>
+        <item>음료</item>
+        <item>인스턴트</item>
+        <item>김치젓갈</item>
+        <item>반찬</item>
+
+    </string-array>
+</resources>
+

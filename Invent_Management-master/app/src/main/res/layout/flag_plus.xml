@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/popup_round"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    tools:context=".AddImageTypeMenu">
+
+    <!-- 타이틀바 -->
+
+    <RadioGroup
+        android:id="@+id/inoutGroup"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/inbtn"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/button_round_solid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:text="입고"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/outbtn"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/button_round_solid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:text="출고"/>
+
+    </RadioGroup>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:id="@+id/input_option"
+        android:visibility="gone"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/camera"
+            android:background="@drawable/button_round_solid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:padding="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="카메라"/>
+
+        <Button
+            android:id="@+id/gallery"
+            android:background="@drawable/button_round_solid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple_700"
+            android:layout_marginBottom="5dp"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:text="갤러리"/>
+
+        <Button
+            android:id="@+id/self_btn"
+            android:background="@drawable/button_round_solid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/purple_700"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:text="직접선택"/>
+
+    </LinearLayout>
+
+    <!-- Notice -->
+    <View
+        style="@style/Line_width" />
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="취소"
+            android:textSize="15sp"
+            android:textColor="@color/purple_700"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="mOnClose"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>

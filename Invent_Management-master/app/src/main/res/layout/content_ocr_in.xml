@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey_100"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OcrInActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!--상단-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                android:elevation="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="상세입력"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/ok_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="right|center"
+                    android:background="@null"
+                    android:src="@drawable/ic_baseline_check_25"
+                    android:gravity="right"
+                    tools:ignore="VectorDrawableCompat" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/in_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

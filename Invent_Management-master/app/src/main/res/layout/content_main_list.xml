@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/base_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:padding="5dp"
+            android:src="@color/grey_100"/>-->
+        <com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/item_amount"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:progress_text_color="@color/purple_700"
+            app:style="solid_line"
+            android:progress="0"
+            app:progress_text_size="16sp"
+            app:progress_stroke_width="5dp "
+            app:progress_stroke_cap="round"
+            app:progress_start_color="@color/purple_700"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:gravity="left|center_vertical"
+                android:text="이름"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="upgrade.json"
+                app:lottie_loop="true"
+                app:lottie_repeatMode="restart" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/downgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="downgrade.json"
+                    app:lottie_loop="true"
+                    app:lottie_repeatMode="restart" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_nDay"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/button_round_solid"
+                android:gravity="center"
+                android:text="D-180"
+                android:textColor="@color/purple_700"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--<com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/item_amount"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:progress_text_color="@color/colorAccent"
+            app:style="solid_line"
+            android:progress="0"
+            app:progress_text_size="16sp"
+            app:progress_stroke_width="5dp "
+            app:progress_stroke_cap="round"
+            app:progress_start_color="@color/colorAccent"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp" />-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/item_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1358"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:text="g"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="@color/grey_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/grey_500"
+                    android:textSize="16sp"
+                    android:text="개"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

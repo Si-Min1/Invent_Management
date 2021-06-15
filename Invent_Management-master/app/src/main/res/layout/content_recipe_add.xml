@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".RecipeAddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageButton
+                android:id="@+id/addRecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="레시피추가"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<ImageButton
+                android:id="@+id/ok_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:gravity="right"
+                android:src="@drawable/ic_baseline_check_24"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:gravity="right"
+                android:src="@drawable/ic_baseline_arrow_forward_24" />-->
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right|center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/Line_width"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+    <LinearLayout
+        android:id="@+id/recipe_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/recipe_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/recipe_info"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/popup_round"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="메뉴 정보"
+                        android:textColor="@color/purple_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/recipe_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_round_solid"
+                        android:hint="레시피명"
+                        android:paddingLeft="30dp"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/recipe_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/button_round_solid"
+                        android:hint="가격"
+                        android:paddingLeft="30dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/img_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="300dp"
+                android:background="@drawable/button_title_round"
+                android:elevation="10dp"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/button_title_round"
+                android:elevation="10dp"
+                android:text="다음"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <!--식재료 정보-->
+    <LinearLayout
+        android:id="@+id/recipe_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:background="@color/grey_100"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="30dp"
+            android:paddingRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="식재료 정보"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add_wUserItem_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/add_wUserItem_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/button_title_round"
+            android:elevation="10dp"
+            android:text="확인"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

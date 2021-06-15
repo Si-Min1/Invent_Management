@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/user_Nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="25dp"
+        android:text="TextView"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_Profile" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="rotating.json"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="restart"
+        tools:ignore="MissingConstraints" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="party.json"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="restart"
+        tools:ignore="MissingConstraints" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_Profile"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="150dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/user_Nickname"
+        app:layout_constraintEnd_toEndOf="@+id/user_Nickname"
+        app:layout_constraintStart_toStartOf="@+id/user_Nickname"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="이 계정이 맞습니까?"
+        android:textColor="@color/grey_200"
+        app:layout_constraintBottom_toTopOf="@+id/button_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

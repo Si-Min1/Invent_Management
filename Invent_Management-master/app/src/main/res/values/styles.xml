@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#47C83E</item>
+        <item name="colorPrimaryDark">#5B35F5</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--note 줄 긋기 (가로)-->
+    <style name = "Line_width">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/grey_200</item>
+    </style>
+
+    <!--note 줄 긋기 (세로)-->
+    <style name = "Line_height">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/grey_200</item>
+    </style>
+
+
+    <!--note 스피너 테마-->
+    <style name="spinner" parent="AppTheme">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="tabHost" parent="AppTheme">
+    </style>
+
+</resources>

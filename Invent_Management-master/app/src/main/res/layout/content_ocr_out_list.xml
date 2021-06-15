@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textSize="16sp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@drawable/popup_round"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:background="@null"
+                android:src="@drawable/ic_round_close_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <EditText
+                android:background="@null"
+                android:id="@+id/recipe_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="40dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/purple_700"
+                android:text="메뉴명" />
+
+
+        </LinearLayout>
+
+        <View style="@style/Line_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/recipe_price"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:hint="판매가격" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/grey_500"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="원"/>
+
+            </LinearLayout>
+
+            <View style="@style/Line_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/recipe_count"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:hint="수량" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/grey_500"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="개"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View style="@style/Line_width" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
